@@ -1,8 +1,11 @@
 const express = require('express');
+const bodyParser = require('body-parser')
 const app = express();
-const port = 8080
+app.use(bodyParser.json())
 
 const routes = require('./rotas');
+
+const port = 8080
 
 routes(app);
 
