@@ -7,8 +7,7 @@ module.exports = (app)=> {
 
     app.get('/', Controller.nadaRota())
 
-    app.post('/teste', (req, res)=>{
-        console.log(req.body[1].nome, req.body[1].sobrenome)
-        res.send('ta la')
-    })
+    app.post('/teste', Controller.postTeste())
+
+    app.post('/testedois', Controller.postTesteDois())
 }
